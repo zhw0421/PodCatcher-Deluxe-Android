@@ -38,6 +38,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import net.alliknow.podcatcher.R;
+import net.alliknow.podcatcher.adapters.GenreSpinnerAdapter;
+import net.alliknow.podcatcher.adapters.LanguageSpinnerAdapter;
+import net.alliknow.podcatcher.adapters.MediaTypeSpinnerAdapter;
+import net.alliknow.podcatcher.adapters.SuggestionListAdapter;
 import net.alliknow.podcatcher.listeners.OnAddSuggestionListener;
 import net.alliknow.podcatcher.model.types.Genre;
 import net.alliknow.podcatcher.model.types.Language;
@@ -45,10 +49,6 @@ import net.alliknow.podcatcher.model.types.MediaType;
 import net.alliknow.podcatcher.model.types.Podcast;
 import net.alliknow.podcatcher.model.types.Progress;
 import net.alliknow.podcatcher.view.ProgressView;
-import net.alliknow.podcatcher.view.adapters.GenreSpinnerAdapter;
-import net.alliknow.podcatcher.view.adapters.LanguageSpinnerAdapter;
-import net.alliknow.podcatcher.view.adapters.MediaTypeSpinnerAdapter;
-import net.alliknow.podcatcher.view.adapters.SuggestionListAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
