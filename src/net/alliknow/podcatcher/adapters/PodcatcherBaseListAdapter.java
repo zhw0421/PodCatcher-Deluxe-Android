@@ -15,15 +15,15 @@
  * along with PodCatcher Deluxe. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.alliknow.podcatcher.view.adapters;
+package net.alliknow.podcatcher.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.StateListDrawable;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.View;
-import android.widget.TextView;
 
 import net.alliknow.podcatcher.R;
 
@@ -131,8 +131,12 @@ public abstract class PodcatcherBaseListAdapter extends PodcatcherBaseAdapter {
         states.addState(new int[] {
                 android.R.attr.state_pressed
         }, new ColorDrawable(lightThemeColor));
-        // This is the view the background is drawn for
-        view.findViewById(R.id.list_item_background).setBackgroundDrawable(states);
+        // Set the states drawable
+        try {
+            view.findViewById(R.id.list_item_main_content).setBackgroundDrawable(states);
+        } catch (NullPointerException nex) {
+            Log.e(getClass().getSimpleName(), "Main content layout not defined", nex);
+        }
 
         // This handles the selected, checked and none states
         if (checkedPositions.get(position))
@@ -142,17 +146,5 @@ public abstract class PodcatcherBaseListAdapter extends PodcatcherBaseAdapter {
         else {
             view.setBackgroundColor(Color.TRANSPARENT);
         }
-    }
-
-    /**
-     * Set text for a list item view element.
-     * 
-     * @param listItem The view representing the whole list item.
-     * @param viewId View id of the child view, has to be (a subclass of)
-     *            <code>TextView</code>.
-     * @param text Text to display.
-     */
-    protected static void setText(View listItem, int viewId, String text) {
-        ((TextView) listItem.findViewById(viewId)).setText(text);
     }
 }

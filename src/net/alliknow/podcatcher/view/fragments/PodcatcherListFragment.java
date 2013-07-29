@@ -27,9 +27,9 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import net.alliknow.podcatcher.R;
+import net.alliknow.podcatcher.adapters.PodcatcherBaseListAdapter;
 import net.alliknow.podcatcher.model.types.Progress;
 import net.alliknow.podcatcher.view.ProgressView;
-import net.alliknow.podcatcher.view.adapters.PodcatcherBaseListAdapter;
 
 /**
  * Generic list fragment sub-class for podcatcher list fragments. Defines some

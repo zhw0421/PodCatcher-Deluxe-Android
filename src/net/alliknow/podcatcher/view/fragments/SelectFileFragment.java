@@ -36,8 +36,8 @@ import android.widget.TextView;
 
 import net.alliknow.podcatcher.R;
 import net.alliknow.podcatcher.SelectFileActivity.SelectionMode;
+import net.alliknow.podcatcher.adapters.FileListAdapter;
 import net.alliknow.podcatcher.listeners.OnSelectFileListener;
-import net.alliknow.podcatcher.view.adapters.FileListAdapter;
 
 import java.io.File;
 
